@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相识天数记录</title>
+    <style>
+        html{
+        height:100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            animation: gradientBG 10s ease infinite;
+        }
+@keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+z-index:-1;
+        }
+
+        .hearts span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #ff6b6b;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
+            animation: animateHearts 5s linear infinite;
+        }
+
+        @keyframes animateHearts {
+            0% {
+                transform: translateY(-10%);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        .container {
+margin-block-start: 2.5rem;
+            background-color: #fff;
+        display: inline-block;
+        }
+
+        .box {
+            
+            display: none;
+           
+        }
+        #div1 {
+ border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            display: flex; /* 初始显示 div1 */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        #div1 h1 {
+            color: #333;
+        }
+        #div1 .days {
+            font-size: 2em;
+            color: #f11800;
+        }
+
+        #div2 {
+            color: white;
+justify-content: center;
+}
+        }
+
+        table {
+        width: 70%;
+        max-width: 800px;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background: linear-gradient(45deg, #4caf50, #81c784);
+        color: white;
+        font-size: 18px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+        transition: background-color 0.3s;
+      }
+
+      td {
+        font-size: 16px;
+        color: #555;
+      }
+
+      @media (max-width: 600px) {
+        table {
+          width: 90%;
+        }
+        th,
+        td {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    .box1{
+flex-direction: column;
+}
+
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+    </style>
+</head>
+<body>
+<div class="hearts">
+        <span style="left: 10%; animation-delay: 0s;"></span>
+        <span style="left: 20%; animation-delay: 1s;"></span>
+        <span style="left: 30%; animation-delay: 2s;"></span>
+        <span style="left: 40%; animation-delay: 3s;"></span>
+        <span style="left: 50%; animation-delay: 4s;"></span>
+        <span style="left: 60%; animation-delay: 5s;"></span>
+        <span style="left: 70%; animation-delay: 6s;"></span>
+        <span style="left: 80%; animation-delay: 7s;"></span>
+        <span style="left: 90%; animation-delay: 8s;"></span>
+    </div>
+ 
+<div class="container">
+    <div id="div1" class="box box1">
+        <h2>与林师傅相识第</h2><div class="days" id="days">0</div><h2>天</h2>
+        <h1 class="days" id="days2">❤️ 0 ❤️ </h1>
+</div>
+    <div id="div2" class="box">
+        <table>
+            <tr>
+              <th></th>
+              <th>喜欢</th>
+              <th>不喜欢</th>
+            </tr>
+            <tr>
+              <td>吃</td>
+              <td>各种粉、江西菜、吃辣、同学婶婶的粽子</td>
+              <td>月饼、糯米饭、牛杂、羊肉、鱼、姜蒜末</td>
+            </tr>
+            <tr>
+              <td>喝</td>
+              <td>津威</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>玩</td>
+              <td>冬天、桂林</td>
+              <td>运动</td>
+            </tr>
+            <tr>
+              <td>乐</td>
+              <td>琼瑶剧、匹诺曹、大耳朵图图、杰伦、唱K</td>
+              <td>-</td>
+            </tr>
+          </table>
+    </div>
+    
+</div>
+
+<footer style="position: fixed;bottom: 0;">
+<a style="text-decoration: none;" href="https://beian.miit.gov.cn/#/home">ICP备案号：粤ICP备2024320290号-1</a>
+<p><a href="https://beian.mps.gov.cn/#/query/webSearch?code=61011302001964" rel="noreferrer noopener" target="_blank">粤公网安备44011502001295号</a></p>
+</footer>
+<script>
+    // 设置你们相识的日期 (格式: 年, 月-1, 日)
+    var startDate = new Date(2024, 6, 14);
+var startDate2 = new Date(2025, 1, 4);
+    // 获取当前日期
+    var currentDate = new Date();
+
+    // 计算相识的天数
+    var timeDifference = currentDate - startDate;
+var timeDifference2 = currentDate - startDate2;
+    var daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // 把毫秒转换为天
+var daysDifference2 = Math.floor(timeDifference2 / (1000 * 60 * 60 * 24)) + 1; // 把毫秒转换为天
+console.log(daysDifference2)
+    // 把相识的天数显示在页面上
+    document.getElementById('days').innerText = daysDifference + 1;
+document.getElementById('days2').innerText = '❤️ ' +daysDifference2+ ' ❤️';
+    let div1 = document.getElementById('div1');
+        let div2 = document.getElementById('div2');
+        let clickCount = 0;
+
+        function handleClick(divToShow, divToHide) {
+console.log(111111111)
+            clickCount++;
+            if (clickCount === 2) {
+                divToShow.style.display = 'flex';  // 显示目标div
+                divToHide.style.display = 'none';  // 隐藏当前div
+                clickCount = 0; // 重置点击计数
+            }
+        }
+
+        div1.addEventListener('click', () => handleClick(div2, div1));
+        div2.addEventListener('click', () => handleClick(div1, div2));
+</script>
+
+</body>
+</html>
